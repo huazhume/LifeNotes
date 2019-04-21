@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qGg-OZ-uje">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0Lu-Um-pda">
+            <objects>
+                <viewController id="qGg-OZ-uje" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b5v-DV-ogR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-subscription-footer" translatesAutoresizingMaskIntoConstraints="NO" id="vmj-MS-uqC">
+                                <rect key="frame" x="0.0" y="387" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Zsa-n0-VzH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LifeKeeping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gt-fe-58n">
+                                <rect key="frame" x="133" y="602" width="109" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.63137254899999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0039215686269999999" green="0.79139316530000003" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SWU-3j-LMY" firstAttribute="trailing" secondItem="vmj-MS-uqC" secondAttribute="trailing" id="7rL-Hn-h7Z"/>
+                            <constraint firstItem="4gt-fe-58n" firstAttribute="centerX" secondItem="SWU-3j-LMY" secondAttribute="centerX" id="F3V-9m-bxJ"/>
+                            <constraint firstItem="4gt-fe-58n" firstAttribute="top" secondItem="vmj-MS-uqC" secondAttribute="bottom" constant="15" id="Peh-1a-AJK"/>
+                            <constraint firstItem="SWU-3j-LMY" firstAttribute="bottom" secondItem="vmj-MS-uqC" secondAttribute="bottom" constant="80" id="niO-9s-RZV"/>
+                            <constraint firstItem="vmj-MS-uqC" firstAttribute="leading" secondItem="SWU-3j-LMY" secondAttribute="leading" id="vOb-Dq-ALC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SWU-3j-LMY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ww4-me-96E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="new-subscription-footer" width="365" height="191"/>
+    </resources>
+</document>

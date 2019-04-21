@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="192" id="KGk-i7-Jjw" customClass="MTMessageViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="191.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbk-vm-fSk">
+                        <rect key="frame" x="5" y="5" width="356" height="181.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是标题呀标题呀比啊揉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnp-Df-UVf">
+                                <rect key="frame" x="5" y="5" width="346" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="amj-DW-iUy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" red="0.35723350250000002" green="0.35723350250000002" blue="0.35723350250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来源：生活笔记官方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybo-Yy-FF4">
+                                <rect key="frame" x="5" y="157" width="110.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.76862745099999996" green="0.58823529409999997" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发哈是多久客服哈考试大纲飞机卡说过的风景卡告诉对方空间啊公司的客服噶可是个短发开始的广发卡就是个大房间卡上给大家反馈过分手都会发生的很疯狂拉升的咖啡拉花收到了咖啡哈里斯电话发来看扫黄打非快乐" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5b-et-f6w">
+                                <rect key="frame" x="5" y="31" width="346" height="120.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.35723350253807107" green="0.35723350253807107" blue="0.35723350253807107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天 14: 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txi-1K-Rms">
+                                <rect key="frame" x="282.5" y="157" width="63.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m5b-et-f6w" firstAttribute="top" secondItem="Cnp-Df-UVf" secondAttribute="bottom" constant="8" id="602-Ah-bjj"/>
+                            <constraint firstItem="Cnp-Df-UVf" firstAttribute="top" secondItem="sbk-vm-fSk" secondAttribute="top" constant="5" id="62Y-q5-c1t"/>
+                            <constraint firstAttribute="trailing" secondItem="m5b-et-f6w" secondAttribute="trailing" constant="5" id="DHA-wv-Eee"/>
+                            <constraint firstAttribute="bottom" secondItem="m5b-et-f6w" secondAttribute="bottom" constant="30" id="K7d-cg-931"/>
+                            <constraint firstItem="Cnp-Df-UVf" firstAttribute="leading" secondItem="sbk-vm-fSk" secondAttribute="leading" constant="5" id="LMI-oQ-EWz"/>
+                            <constraint firstAttribute="bottom" secondItem="ybo-Yy-FF4" secondAttribute="bottom" constant="10" id="Mys-1D-PN5"/>
+                            <constraint firstItem="ybo-Yy-FF4" firstAttribute="leading" secondItem="sbk-vm-fSk" secondAttribute="leading" constant="5" id="Ov2-F0-9aI"/>
+                            <constraint firstItem="txi-1K-Rms" firstAttribute="centerY" secondItem="ybo-Yy-FF4" secondAttribute="centerY" id="U4j-OE-Awg"/>
+                            <constraint firstAttribute="trailing" secondItem="txi-1K-Rms" secondAttribute="trailing" constant="10" id="bRY-dh-7AK"/>
+                            <constraint firstAttribute="trailing" secondItem="Cnp-Df-UVf" secondAttribute="trailing" constant="5" id="hOW-4I-Ko4"/>
+                            <constraint firstItem="m5b-et-f6w" firstAttribute="leading" secondItem="sbk-vm-fSk" secondAttribute="leading" constant="5" id="tRx-yC-Qak"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.97202173223350252" green="0.97202173223350252" blue="0.97202173223350252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="sbk-vm-fSk" secondAttribute="trailing" constant="5" id="1s9-ge-t90"/>
+                    <constraint firstItem="sbk-vm-fSk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="f3Y-Km-r01"/>
+                    <constraint firstAttribute="bottom" secondItem="sbk-vm-fSk" secondAttribute="bottom" constant="5" id="fJj-cg-JET"/>
+                    <constraint firstItem="sbk-vm-fSk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="nSV-aQ-8AO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="sbk-vm-fSk" id="Ofs-fI-SDa"/>
+                <outlet property="contentLabel" destination="m5b-et-f6w" id="8ej-sl-hHk"/>
+                <outlet property="sourceLabel" destination="ybo-Yy-FF4" id="375-y9-bud"/>
+                <outlet property="timeLabel" destination="txi-1K-Rms" id="w93-5S-C0x"/>
+                <outlet property="titleLabel" destination="Cnp-Df-UVf" id="BRz-9X-bT0"/>
+            </connections>
+            <point key="canvasLocation" x="-109" y="59"/>
+        </tableViewCell>
+    </objects>
+</document>
