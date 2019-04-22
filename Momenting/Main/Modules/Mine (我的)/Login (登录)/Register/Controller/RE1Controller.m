@@ -118,6 +118,7 @@
     vc.index = self.index;
     vc.phone = self.textfield.text;
     vc.openid = self.openid;
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 

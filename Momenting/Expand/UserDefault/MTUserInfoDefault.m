@@ -13,7 +13,67 @@
 static NSString *kUserInfoKey = @"userInfoKey";
 static NSString *kLanagureKey = @"appLanguage";
 
+static NSString *kUsersKey = @"kUsersKey";
+
 @implementation MTUserInfoDefault
+
+
++ (NSArray *)users
+{
+    NSString *key = kUsersKey;
+    NSArray *info = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    return info;
+}
+
++ (void)saveUser:(NSDictionary *)user
+{
+    NSString *userPhone = user[@"phone"];
+    NSArray *users = [self users];
+    
+    __block BOOL isExist = NO;
+    [users enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *objPhone = obj[@"phone"];
+        if ([userPhone isEqualToString:objPhone]) {
+            NSMutableDictionary *mudic = [NSMutableDictionary dictionaryWithDictionary:obj];
+            [mudic setObject:user[@"password"] forKey:@"password"];
+            obj = [mudic copy];
+            isExist = YES;
+        }
+    }];
+    
+    NSMutableArray *muUsers = [NSMutableArray arrayWithArray:users];
+    if (!isExist) {
+        [muUsers addObject:user];
+    }
+    
+    NSString *key = kUsersKey;
+    [[NSUserDefaults standardUserDefaults] setObject:muUsers forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (BOOL)isLoginSuccessWithUser:(NSDictionary *)user {
+    
+    NSString *userPhone = user[@"phone"];
+    NSString *password = user[@"password"];
+    NSArray *users = [self users];
+    __block BOOL isExist = NO;
+    [users enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *objPhone = obj[@"phone"];
+        NSString *objPassword = obj[@"password"];
+        if ([userPhone isEqualToString:objPhone] && [objPassword isEqualToString:password]) {
+            isExist = YES;
+        }
+    }];
+    
+    if (isExist) {
+        [UIView showToastInKeyWindow:@"欢迎登陆"];
+    } else {
+        [UIView showToastInKeyWindow:@"用户名或密码错误"];
+    }
+    
+    return isExist;
+}
+
 
 
 + (void)saveDefaultUserInfo:(MTMeModel *)model

@@ -131,6 +131,7 @@
             baseVC = vc;
         } else if (indexPath.row == 2) {
             //帮助
+            [self sendEmail];
         } else {
             //关于生活笔记
             NSString * htmlPath = @"aboutours";
@@ -189,6 +190,26 @@
         _footerButton.backgroundColor = [UIColor whiteColor];
     }
     return _footerButton;
+}
+
+-(void)sendEmail
+{
+    NSMutableString *mailUrl = [NSMutableString string];
+    //添加收件人
+    NSArray *toRecipients = [NSArray arrayWithObject: @"huazhume@163.com"];
+    [mailUrl appendFormat:@"mailto:%@", [toRecipients componentsJoinedByString:@","]];
+    //    //添加抄送
+    //    NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil];
+    //    [mailUrl appendFormat:@"?cc=%@", [ccRecipients componentsJoinedByString:@","]];
+    //    //添加密送
+    //    NSArray *bccRecipients = [NSArray arrayWithObjects:@"fourth@example.com", nil];
+    //    [mailUrl appendFormat:@"&bcc=%@", [bccRecipients componentsJoinedByString:@","]];
+    //添加主题
+    [mailUrl appendString:@"&subject=联系我们"];
+    //添加邮件内容
+    [mailUrl appendString:@"&body=<b>Thanks</b> body!"];
+    NSString* email = [mailUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:email]];
 }
 
 

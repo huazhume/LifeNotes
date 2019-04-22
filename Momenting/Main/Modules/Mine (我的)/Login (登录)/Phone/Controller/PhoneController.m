@@ -6,6 +6,7 @@
 #import "PhoneController.h"
 #import "RE1Controller.h"
 #import "LOGIN_NOTIFICATION.h"
+#import "MTUserInfoDefault.h"
 
 
 #pragma mark - 声明
@@ -104,11 +105,18 @@
                            account, @"account",
                            self.passField.text, @"password", nil];
     
-    [UIView showToastInKeyWindow:@"登录成功"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-         [self.navigationController popViewControllerAnimated:NO];
-    });
-
+    
+    if (!account.length || !self.passField.text.length) {
+        [UIView showToastInKeyWindow:@"请输入用户名或密码"];
+        return;
+    }
+    
+    NSDictionary *user = @{@"phone":account, @"password" : self.passField.text};
+    if ([MTUserInfoDefault isLoginSuccessWithUser:user]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:NO];
+        });
+    }
 }
 
 

@@ -5,6 +5,7 @@
 
 #import "RE3Controller.h"
 #import "LOGIN_NOTIFICATION.h"
+#import "MTUserInfoDefault.h"
 
 
 #pragma mark - 声明
@@ -73,6 +74,13 @@
                            self.pass1Field.text, @"password", nil];
     [self.view endEditing:true];
     
+    NSDictionary *user = @{@"phone":self.phone, @"password" : self.pass1Field.text};
+    
+    [MTUserInfoDefault saveUser:user];
+    [UIView showToastInKeyWindow:@"注册成功"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
 }
 // 忘记密码
 - (void)forgetRequest {
@@ -80,6 +88,12 @@
                            self.phone, @"account",
                            self.pass1Field.text, @"password", nil];
     [self.view endEditing:true];
+    NSDictionary *user = @{@"phone":self.phone, @"password" : self.pass1Field.text};
+    [MTUserInfoDefault saveUser:user];
+    [UIView showToastInKeyWindow:@"注册成功"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
    
 }
 // 绑定手机

@@ -27,4 +27,10 @@
 
 + (BOOL)isAgreeSecretList;
 
++ (NSArray *)users;
+
++ (void)saveUser:(NSDictionary *)user;
+
++ (BOOL)isLoginSuccessWithUser:(NSDictionary *)user;
+
 @end

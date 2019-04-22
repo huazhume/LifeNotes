@@ -51,11 +51,6 @@
     UIImageView *imagaVIew = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2.0 - 15, 9.5, 30, 30)];
     imagaVIew.image = [UIImage imageNamed:@"tab_stroked_write"];
     [self.tabBar addSubview:imagaVIew];
-//    [imagaVIew mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.equalTo(self.tabBar);
-//        make.top.equalTo(self.tabBar).offset(5);
-//    }];
-    
 }
 
 - (void)addChildViewController:(MTBaseViewController *)childVc title:(NSString *)title image:(NSString *)image selImage:(NSString *)selImage {
